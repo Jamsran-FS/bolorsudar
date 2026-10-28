@@ -172,7 +172,7 @@ function Reviews({ slug, reviews }: { slug: string; reviews: Review[] }) {
           <button
             type="submit"
             disabled={state === "sending"}
-            className="min-h-12 cursor-pointer rounded-full bg-brand px-6 text-[15px] font-semibold text-white hover:bg-brand-dark disabled:opacity-60"
+            className="min-h-12 cursor-pointer rounded-btn bg-brand px-6 text-[15px] font-semibold text-white hover:bg-brand-dark disabled:opacity-60"
           >
             {state === "sending" ? "Илгээж байна…" : "Илгээх"}
           </button>

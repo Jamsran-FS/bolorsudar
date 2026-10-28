@@ -22,6 +22,6 @@ export const ORDER_STATUS_STYLE: Record<OrderStatus, string> = {
   pending: "bg-[#FDF1D8] text-[#8A5A0B]",
   confirmed: "bg-[#E5ECF6] text-[#1F3A5F]",
   shipped: "bg-lilac text-[#4B3F72]",
-  delivered: "bg-mint text-brand",
+  delivered: "bg-brand-soft text-brand",
   cancelled: "bg-[#F6E6E3] text-sale",
 };

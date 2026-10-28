@@ -12,7 +12,7 @@ import { SITE } from "@/lib/site";
 
 export default function BookPage({ params }: PageProps<"/books/[slug]">) {
   return (
-    <div className="mx-auto max-w-[1280px] px-4 pb-16 pt-6 md:px-6 md:pb-20">
+    <div className="mx-auto max-w-[1180px] px-4 pb-16 pt-6 md:px-6 md:pb-20">
       <Suspense fallback={<DetailSkeleton />}>
         <BookDetailView params={params} />
       </Suspense>
@@ -60,7 +60,7 @@ async function BookDetailView({ params }: { params: PageProps<"/books/[slug]">["
 
       <div className="flex flex-wrap items-start gap-8 md:gap-14">
         <div
-          className="flex min-w-0 flex-[1_1_380px] justify-center rounded-[24px] px-6 py-10 md:rounded-[28px] md:py-14"
+          className="flex min-w-0 flex-[1_1_380px] justify-center rounded-btn px-6 py-10 md:rounded-btn md:py-14"
           style={{ background: `color-mix(in srgb, ${book.coverColor} 14%, white)` }}
         >
           <BookCover book={book} size="lg" className="w-[220px] max-w-full md:w-[300px]" />
@@ -69,9 +69,9 @@ async function BookDetailView({ params }: { params: PageProps<"/books/[slug]">["
         <div className="flex min-w-0 flex-[1_1_440px] flex-col gap-5 md:gap-[22px]">
           <div className="flex flex-wrap gap-2">
             {book.categoryName && (
-              <span className="rounded-full bg-mint px-3 py-1.5 text-[13px] font-semibold text-brand">{book.categoryName}</span>
+              <span className="rounded-btn bg-brand-soft px-3 py-1.5 text-[13px] font-semibold text-brand">{book.categoryName}</span>
             )}
-            {book.badge && <span className="rounded-full bg-surface px-3 py-1.5 text-[13px] font-semibold text-body">{book.badge}</span>}
+            {book.badge && <span className="rounded-btn bg-surface px-3 py-1.5 text-[13px] font-semibold text-body">{book.badge}</span>}
           </div>
           <h1 className="font-display text-[30px] font-bold leading-[1.1] tracking-[-0.03em] md:text-[44px]">{book.title}</h1>
           {book.authorName && (
@@ -105,7 +105,7 @@ async function BookDetailView({ params }: { params: PageProps<"/books/[slug]">["
 
       {book.related.length > 0 && (
         <section className="mt-16 md:mt-20">
-          <h2 className="mb-7 font-display text-xl font-semibold tracking-[-0.02em] md:text-[28px]">Танд таалагдаж магадгүй</h2>
+          <h2 className="mb-7 font-display text-xl font-bold uppercase tracking-[.08em] md:text-[28px]">Танд таалагдаж магадгүй</h2>
           <BookGrid books={book.related} />
         </section>
       )}
@@ -116,9 +116,9 @@ async function BookDetailView({ params }: { params: PageProps<"/books/[slug]">["
 function DetailSkeleton() {
   return (
     <div className="flex flex-wrap gap-14">
-      <div className="h-[440px] flex-[1_1_380px] animate-pulse rounded-[28px] bg-surface" />
+      <div className="h-[440px] flex-[1_1_380px] animate-pulse rounded-btn bg-surface" />
       <div className="flex flex-[1_1_440px] flex-col gap-5">
-        <div className="h-8 w-40 animate-pulse rounded-full bg-surface" />
+        <div className="h-8 w-40 animate-pulse rounded-btn bg-surface" />
         <div className="h-12 w-3/4 animate-pulse rounded bg-surface" />
         <div className="h-6 w-1/3 animate-pulse rounded bg-surface" />
         <div className="h-24 animate-pulse rounded bg-surface" />

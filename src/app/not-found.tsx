@@ -6,7 +6,7 @@ export default function NotFound() {
       <span className="font-display text-6xl font-bold text-brand">404</span>
       <h1 className="font-display text-2xl font-semibold">Хуудас олдсонгүй</h1>
       <p className="text-muted">Таны хайсан хуудас устсан эсвэл хаяг буруу байна.</p>
-      <Link href="/" className="rounded-full bg-brand px-6 py-3.5 font-semibold text-white hover:bg-brand-dark hover:text-white">
+      <Link href="/" className="rounded-btn bg-brand px-6 py-3.5 font-display font-bold uppercase tracking-[.06em] text-white hover:bg-brand-dark hover:text-white">
         Нүүр хуудас руу буцах
       </Link>
     </div>

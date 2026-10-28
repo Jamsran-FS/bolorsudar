@@ -48,13 +48,13 @@ export default function CartPage() {
   if (placed) {
     return (
       <div className="mx-auto flex max-w-xl flex-col items-center gap-4 px-4 py-20 text-center">
-        <span className="flex h-16 w-16 items-center justify-center rounded-full bg-mint text-3xl text-brand">✓</span>
+        <span className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-soft text-3xl text-brand">✓</span>
         <h1 className="font-display text-[26px] font-bold">Захиалга хүлээн авлаа</h1>
         <p className="text-body">
           Таны захиалгын дугаар <strong>#{placed.id}</strong>, нийт дүн <strong>{formatPrice(placed.total)}</strong>. Бид удахгүй
           холбогдож баталгаажуулна.
         </p>
-        <Link href="/books" className="mt-2 rounded-full bg-brand px-6 py-3.5 font-semibold text-white hover:bg-brand-dark hover:text-white">
+        <Link href="/books" className="mt-2 rounded-btn bg-brand px-6 py-3.5 font-semibold text-white hover:bg-brand-dark hover:text-white">
           Үргэлжлүүлэн дэлгүүрлэх
         </Link>
       </div>
@@ -62,15 +62,15 @@ export default function CartPage() {
   }
 
   return (
-    <div className="mx-auto max-w-[1280px] px-4 pb-16 pt-6 md:px-6 md:pb-20 md:pt-10">
-      <h1 className="mb-8 font-display text-[26px] font-bold tracking-[-0.02em] md:text-[38px]">Сагс</h1>
+    <div className="mx-auto max-w-[1180px] px-4 pb-16 pt-6 md:px-6 md:pb-20 md:pt-10">
+      <h1 className="mb-8 font-display text-[26px] font-extrabold uppercase tracking-[.06em] md:text-[38px]">Сагс</h1>
 
       {!ready ? (
         <div className="h-40 animate-pulse rounded-2xl bg-surface" />
       ) : cart.length === 0 ? (
-        <div className="flex flex-col items-center gap-4 rounded-[24px] bg-surface px-6 py-16 text-center">
+        <div className="flex flex-col items-center gap-4 rounded-btn bg-surface px-6 py-16 text-center">
           <p className="text-body">Таны сагс хоосон байна.</p>
-          <Link href="/books" className="rounded-full bg-brand px-6 py-3.5 font-semibold text-white hover:bg-brand-dark hover:text-white">
+          <Link href="/books" className="rounded-btn bg-brand px-6 py-3.5 font-semibold text-white hover:bg-brand-dark hover:text-white">
             Ном сонгох
           </Link>
         </div>
@@ -89,7 +89,7 @@ export default function CartPage() {
                   </Link>
                   <span className="text-sm text-muted">{formatPrice(l.price)}</span>
                   <div className="mt-auto flex flex-wrap items-center justify-between gap-3 pt-2">
-                    <div className="flex items-center rounded-full border border-line-strong p-0.5">
+                    <div className="flex items-center rounded-btn border border-line-strong p-0.5">
                       <button
                         type="button"
                         aria-label="Тоо хасах"
@@ -123,7 +123,7 @@ export default function CartPage() {
             ))}
           </ul>
 
-          <form onSubmit={submit} className="flex min-w-0 flex-[1_1_340px] flex-col gap-3.5 rounded-[24px] border border-line p-6">
+          <form onSubmit={submit} className="flex min-w-0 flex-[1_1_340px] flex-col gap-3.5 rounded-btn border border-line p-6">
             <h2 className="font-display text-lg font-semibold">Хүргэлтийн мэдээлэл</h2>
             <label className="flex flex-col gap-1.5 text-sm font-medium">
               Нэр *
@@ -167,7 +167,7 @@ export default function CartPage() {
             <button
               type="submit"
               disabled={sending}
-              className="min-h-[54px] cursor-pointer rounded-full bg-brand text-base font-semibold text-white hover:bg-brand-dark disabled:opacity-60"
+              className="min-h-[54px] cursor-pointer rounded-btn bg-brand text-base font-semibold text-white hover:bg-brand-dark disabled:opacity-60"
             >
               {sending ? "Илгээж байна…" : "Захиалга өгөх"}
             </button>

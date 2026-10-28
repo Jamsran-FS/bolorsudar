@@ -1,25 +1,28 @@
 @import "tailwindcss";
 
-/* Design tokens lifted from the Хуудас mockups */
+/* Design tokens: Prebook-style dark + coral, Raleway headings */
 @theme {
-  --color-brand: #0e6b53;
-  --color-brand-dark: #0a5440;
-  --color-mint: #e3f1eb;
-  --color-ink: #15171c;
-  --color-body: #3d434d;
-  --color-muted: #5b616e;
-  --color-line: #e4e6ea;
-  --color-line-strong: #c9cdd4;
-  --color-surface: #f3f5f4;
+  --color-brand: #ee5a3f;
+  --color-brand-dark: #d4462c;
+  --color-brand-soft: #fdeeea;
+  --color-ink: #202020;
+  --color-night: #141414;
+  --color-body: #555555;
+  --color-muted: #606060;
+  --color-line: #e8e8e8;
+  --color-line-strong: #c1c1c1;
+  --color-surface: #f9f9f9;
   --color-gold: #f2b33d;
-  --color-sale: #b3261e;
+  --color-sale: #c2311a;
   --color-lilac: #ece8f4;
 
   --font-sans: var(--font-inter), system-ui, sans-serif;
-  --font-display: var(--font-unbounded), var(--font-inter), sans-serif;
+  --font-display: var(--font-raleway), var(--font-inter), sans-serif;
 
-  --shadow-cover: inset 8px 0 0 rgba(0, 0, 0, 0.18), 0 10px 24px rgba(21, 23, 28, 0.12);
-  --shadow-cover-lg: inset 12px 0 0 rgba(0, 0, 0, 0.2), 0 30px 60px rgba(21, 23, 28, 0.3);
+  --radius-btn: 3px;
+
+  --shadow-cover: inset 8px 0 0 rgba(0, 0, 0, 0.18), 0 10px 24px rgba(0, 0, 0, 0.14);
+  --shadow-cover-lg: inset 12px 0 0 rgba(0, 0, 0, 0.2), 0 30px 60px rgba(0, 0, 0, 0.35);
 }
 
 body {
@@ -42,4 +45,12 @@ a:hover {
 }
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+/* Hero backdrop: warm lamplight glow over near-black, standing in for a photo */
+.hero-backdrop {
+  background:
+    radial-gradient(60% 70% at 72% 45%, rgba(176, 120, 52, 0.38), transparent 70%),
+    radial-gradient(45% 60% at 18% 70%, rgba(120, 72, 30, 0.32), transparent 70%),
+    linear-gradient(180deg, #0c0a08 0%, #16110c 55%, #0b0907 100%);
 }

@@ -34,7 +34,7 @@ export function BuyBox({ book }: { book: Book }) {
 
   return (
     <div className="flex flex-wrap items-center gap-3 pt-1.5">
-      <div className="flex items-center rounded-full border border-line-strong p-1">
+      <div className="flex items-center rounded-btn border border-line-strong p-1">
         <button
           type="button"
           aria-label="Тоо хасах"
@@ -61,7 +61,7 @@ export function BuyBox({ book }: { book: Book }) {
         type="button"
         disabled={unavailable}
         onClick={() => addToCart(book, qty)}
-        className="min-h-[54px] flex-[1_1_200px] cursor-pointer rounded-full bg-brand px-6 text-base font-semibold text-white hover:bg-brand-dark disabled:cursor-not-allowed disabled:bg-line-strong"
+        className="min-h-[54px] flex-[1_1_200px] cursor-pointer rounded-btn bg-brand px-6 text-base font-semibold text-white hover:bg-brand-dark disabled:cursor-not-allowed disabled:bg-line-strong"
       >
         {book.isComingSoon ? "Удахгүй ирнэ" : unavailable ? "Дууссан" : `Сагсанд нэмэх · ${formatPrice(book.price * qty)}`}
       </button>
@@ -70,7 +70,7 @@ export function BuyBox({ book }: { book: Book }) {
         aria-label={saved ? "Хүслийн жагсаалтаас хасах" : "Хүслийн жагсаалтад нэмэх"}
         aria-pressed={saved}
         onClick={() => toggleSaved(book)}
-        className={`flex h-[54px] w-[54px] cursor-pointer items-center justify-center rounded-full border border-line-strong bg-white hover:bg-surface ${saved ? "text-sale" : "text-ink"}`}
+        className={`flex h-[54px] w-[54px] cursor-pointer items-center justify-center rounded-btn border border-line-strong bg-white hover:bg-surface ${saved ? "text-sale" : "text-ink"}`}
       >
         <HeartIcon filled={saved} />
       </button>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Unbounded } from "next/font/google";
+import { Inter, Raleway } from "next/font/google";
 import { StoreProvider } from "@/lib/store";
 import "./globals.css";
 
@@ -8,10 +8,10 @@ const inter = Inter({
   subsets: ["latin", "cyrillic"],
 });
 
-const unbounded = Unbounded({
-  variable: "--font-unbounded",
+const raleway = Raleway({
+  variable: "--font-raleway",
   subsets: ["latin", "cyrillic"],
-  weight: ["500", "600", "700"],
+  weight: ["400", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="mn" className={`${inter.variable} ${unbounded.variable} h-full antialiased`}>
+    <html lang="mn" className={`${inter.variable} ${raleway.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <StoreProvider>{children}</StoreProvider>
       </body>

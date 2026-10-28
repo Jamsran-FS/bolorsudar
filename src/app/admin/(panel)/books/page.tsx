@@ -108,7 +108,7 @@ export default function AdminBooksPage() {
                     <td className={td}>
                       <div className="flex flex-wrap gap-1">
                         {!b.isPublished && <Chip className="bg-line text-body">Нуусан</Chip>}
-                        {b.isNew && <Chip className="bg-mint text-brand">Шинэ</Chip>}
+                        {b.isNew && <Chip className="bg-brand-soft text-brand">Шинэ</Chip>}
                         {b.isBestseller && <Chip className="bg-[#FDF1D8] text-[#8A5A0B]">Бэстселлер</Chip>}
                         {b.isComingSoon && <Chip className="bg-lilac text-[#4B3F72]">Удахгүй</Chip>}
                         {b.isFeatured && <Chip className="bg-ink text-white">Онцлох</Chip>}

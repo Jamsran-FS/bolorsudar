@@ -6,9 +6,9 @@ export const metadata = { title: "Зохиолчид" };
 
 export default function AuthorsPage() {
   return (
-    <div className="mx-auto max-w-[1280px] px-4 pb-16 pt-6 md:px-6 md:pb-20 md:pt-10">
-      <h1 className="mb-8 font-display text-[26px] font-bold tracking-[-0.02em] md:text-[38px]">Зохиолчид</h1>
-      <Suspense fallback={<div className="h-60 animate-pulse rounded-[24px] bg-surface" />}>
+    <div className="mx-auto max-w-[1180px] px-4 pb-16 pt-6 md:px-6 md:pb-20 md:pt-10">
+      <h1 className="mb-8 font-display text-[26px] font-extrabold uppercase tracking-[.06em] md:text-[38px]">Зохиолчид</h1>
+      <Suspense fallback={<div className="h-60 animate-pulse rounded-btn bg-surface" />}>
         <AuthorList />
       </Suspense>
     </div>

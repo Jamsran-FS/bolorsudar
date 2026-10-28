@@ -70,7 +70,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
                 href={n.href}
                 aria-current={active ? "page" : undefined}
                 onClick={() => setMenu(false)}
-                className={`rounded-xl px-3 py-2.5 text-sm font-medium ${active ? "bg-mint text-brand" : "text-body hover:bg-surface"}`}
+                className={`rounded-xl px-3 py-2.5 text-sm font-medium ${active ? "bg-brand-soft text-brand" : "text-body hover:bg-surface"}`}
               >
                 {n.label}
               </Link>

@@ -10,12 +10,12 @@ export default function SavedPage() {
   const { ready, saved, toggleSaved } = useStore();
 
   return (
-    <div className="mx-auto max-w-[1280px] px-4 pb-16 pt-6 md:px-6 md:pb-20 md:pt-10">
-      <h1 className="mb-8 font-display text-[26px] font-bold tracking-[-0.02em] md:text-[38px]">Хадгалсан номууд</h1>
+    <div className="mx-auto max-w-[1180px] px-4 pb-16 pt-6 md:px-6 md:pb-20 md:pt-10">
+      <h1 className="mb-8 font-display text-[26px] font-extrabold uppercase tracking-[.06em] md:text-[38px]">Хадгалсан номууд</h1>
       {!ready ? null : saved.length === 0 ? (
-        <div className="flex flex-col items-center gap-4 rounded-[24px] bg-surface px-6 py-16 text-center">
+        <div className="flex flex-col items-center gap-4 rounded-btn bg-surface px-6 py-16 text-center">
           <p className="text-body">Та одоогоор ном хадгалаагүй байна. Номын хуудсан дээрх ♡ товчийг дарж хадгална уу.</p>
-          <Link href="/books" className="rounded-full bg-brand px-6 py-3.5 font-semibold text-white hover:bg-brand-dark hover:text-white">
+          <Link href="/books" className="rounded-btn bg-brand px-6 py-3.5 font-semibold text-white hover:bg-brand-dark hover:text-white">
             Ном үзэх
           </Link>
         </div>

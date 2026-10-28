@@ -25,7 +25,7 @@ function pick(search: Search, key: string) {
 
 export default function CatalogPage({ searchParams }: PageProps<"/books">) {
   return (
-    <div className="mx-auto max-w-[1280px] px-4 pb-16 pt-6 md:px-6 md:pb-20 md:pt-10">
+    <div className="mx-auto max-w-[1180px] px-4 pb-16 pt-6 md:px-6 md:pb-20 md:pt-10">
       <Suspense fallback={<BookGridSkeleton count={10} />}>
         <Catalog searchParams={searchParams} />
       </Suspense>
@@ -69,7 +69,7 @@ async function Catalog({ searchParams }: { searchParams: Promise<Search> }) {
     <>
       <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <h1 className="font-display text-[26px] font-bold tracking-[-0.02em] md:text-[38px]">{title}</h1>
+          <h1 className="font-display text-[26px] font-extrabold uppercase tracking-[.06em] md:text-[38px]">{title}</h1>
           {result && <p className="mt-1 text-sm text-muted">{result.total} ном</p>}
         </div>
         <SortSelect />
@@ -83,7 +83,7 @@ async function Catalog({ searchParams }: { searchParams: Promise<Search> }) {
               key={l.label}
               href={href({ list: l.value })}
               aria-current={on ? "true" : undefined}
-              className={`flex-none rounded-full px-4 py-2.5 text-sm font-semibold ${on ? "bg-ink text-white hover:text-white" : "bg-surface text-ink"}`}
+              className={`flex-none rounded-btn px-4 py-2.5 text-sm font-semibold ${on ? "bg-ink text-white hover:text-white" : "bg-surface text-ink"}`}
             >
               {l.label}
             </Link>
@@ -94,7 +94,7 @@ async function Catalog({ searchParams }: { searchParams: Promise<Search> }) {
       <div className="no-scrollbar -mx-4 mb-8 flex gap-2 overflow-x-auto px-4 md:mx-0 md:flex-wrap md:px-0">
         <Link
           href={href({ category: undefined })}
-          className={`flex-none rounded-full border px-4 py-2 text-sm font-medium ${!params.category ? "border-brand text-brand" : "border-line text-body"}`}
+          className={`flex-none rounded-btn border px-4 py-2 text-sm font-medium ${!params.category ? "border-brand text-brand" : "border-line text-body"}`}
         >
           Бүх ангилал
         </Link>
@@ -104,7 +104,7 @@ async function Catalog({ searchParams }: { searchParams: Promise<Search> }) {
             <Link
               key={c.id}
               href={href({ category: c.slug })}
-              className="flex-none rounded-full border px-4 py-2 text-sm font-medium"
+              className="flex-none rounded-btn border px-4 py-2 text-sm font-medium"
               style={on ? { background: c.bg, color: c.fg, borderColor: c.bg } : { borderColor: "var(--color-line)" }}
             >
               {c.name}
@@ -112,7 +112,7 @@ async function Catalog({ searchParams }: { searchParams: Promise<Search> }) {
           );
         })}
         {(params.author || params.q) && (
-          <Link href="/books" className="flex-none rounded-full px-4 py-2 text-sm font-medium text-sale">
+          <Link href="/books" className="flex-none rounded-btn px-4 py-2 text-sm font-medium text-sale">
             Шүүлтүүр арилгах ✕
           </Link>
         )}
@@ -133,7 +133,7 @@ async function Catalog({ searchParams }: { searchParams: Promise<Search> }) {
               key={p}
               href={href({ page: p })}
               aria-current={p === params.page ? "page" : undefined}
-              className={`flex h-11 min-w-11 items-center justify-center rounded-full px-3 text-sm font-semibold ${
+              className={`flex h-11 min-w-11 items-center justify-center rounded-btn px-3 text-sm font-semibold ${
                 p === params.page ? "bg-brand text-white hover:text-white" : "bg-surface text-ink"
               }`}
             >
