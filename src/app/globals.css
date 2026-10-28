@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* Design tokens lifted from the Хуудас mockups */
+@theme {
+  --color-brand: #0e6b53;
+  --color-brand-dark: #0a5440;
+  --color-mint: #e3f1eb;
+  --color-ink: #15171c;
+  --color-body: #3d434d;
+  --color-muted: #5b616e;
+  --color-line: #e4e6ea;
+  --color-line-strong: #c9cdd4;
+  --color-surface: #f3f5f4;
+  --color-gold: #f2b33d;
+  --color-sale: #b3261e;
+  --color-lilac: #ece8f4;
+
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-unbounded), var(--font-inter), sans-serif;
+
+  --shadow-cover: inset 8px 0 0 rgba(0, 0, 0, 0.18), 0 10px 24px rgba(21, 23, 28, 0.12);
+  --shadow-cover-lg: inset 12px 0 0 rgba(0, 0, 0, 0.2), 0 30px 60px rgba(21, 23, 28, 0.3);
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+a:hover {
+  color: var(--color-brand);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
